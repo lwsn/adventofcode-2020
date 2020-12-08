@@ -24,7 +24,4 @@ const val = (o) => Object.keys(vObj).every((k) => vObj[k](o[k] || ''));
 const mkv = (s) => s.reduce((a, p) => ((k, v) => ({ ...a, [k]: v }))(...p.split(':')), {});
 const resultB = data.reduce((a, s) => (val(mkv(s.split(' '))) ? a + 1 : a), 0);
 
-console.log(resultA);
-console.log(resultB);
-
 module.exports = [resultA, resultB];

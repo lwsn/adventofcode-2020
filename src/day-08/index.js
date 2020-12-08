@@ -30,7 +30,4 @@ const resultB = input
   .filter((i) => input[i].op !== 'acc')
   .reduce((a, i) => (a === false ? execute(swapOp(i), true) : a), false);
 
-console.log(resultA);
-console.log(resultB);
-
 module.exports = [resultA, resultB];

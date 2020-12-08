@@ -16,7 +16,4 @@ const count = (b) => Object.entries(rules[b]).reduce((a, [k, v]) => a + v * coun
 const resultA = dig('shiny gold', []).length;
 const resultB = count('shiny gold') - 1;
 
-console.log(resultA);
-console.log(resultB);
-
 module.exports = [resultA, resultB];

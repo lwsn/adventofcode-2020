@@ -28,9 +28,4 @@ const resultBUgly = require('./input.json')
     .reduce((a, c) => (c === /(\w):/.exec(v)[1] ? !a : a), false))
   .filter(Boolean).length;
 
-console.log(resultA);
-console.log(resultAUgly);
-console.log(resultB);
-console.log(resultBUgly);
-
 module.exports = [resultA, resultB];

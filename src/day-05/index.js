@@ -12,7 +12,4 @@ const resultA = input
 
 const resultB = resultA.reverse().find((v, i, [f]) => v - f !== i) - 1;
 
-console.log(resultA[0]);
-console.log(resultB);
-
 module.exports = [resultA[0], resultB];

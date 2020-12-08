@@ -26,7 +26,4 @@ const resultB = require('./input.json').reduce(
   0,
 );
 
-console.log(resultA);
-console.log(resultB);
-
 module.exports = [resultA, resultB];

@@ -20,7 +20,4 @@ const resultB = input.reduce(
   0,
 );
 
-console.log(resultA);
-console.log(resultB);
-
 module.exports = [resultA, resultB];
