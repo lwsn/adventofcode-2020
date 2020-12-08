@@ -2,7 +2,7 @@
   "name": "adventofcode-2020",
   "version": "1.0.0",
   "description": "Only using npm for eslint, I swear. No leftpad here.",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
