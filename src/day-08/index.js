@@ -1,4 +1,4 @@
-const input = require('./8-input.json')
+const input = require('./input.json')
   .map((r) => /(\w{3}) ([+-]\d+)/.exec(r).slice(1))
   .map(([op, arg]) => ({ op, arg: parseInt(arg, 10) }));
 

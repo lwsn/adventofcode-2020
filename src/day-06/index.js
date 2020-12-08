@@ -1,4 +1,4 @@
-const input = require('./6-input').split('\n\n');
+const input = require('./input').split('\n\n');
 
 const resultA = input.reduce(
   (a, s) => a

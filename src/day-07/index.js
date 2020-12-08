@@ -4,7 +4,7 @@ const mkRule = (s) => ((p) => (p ? { [p[2]]: parseInt(p[1], 10) } : {}))(re.exec
 const mkRules = (s) => s.split(', ').reduce((a, v) => ({ ...a, ...mkRule(v) }), {});
 const mkEntry = (s) => (([k, v]) => ({ [k]: mkRules(v) }))(s.split(' bags contain '));
 
-const rules = require('./7-input')
+const rules = require('./input')
   .split('\n')
   .reduce((a, r) => ({ ...a, ...mkEntry(r) }), {});
 

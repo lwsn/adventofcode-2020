@@ -1,4 +1,4 @@
-const data = require('./4-input')
+const data = require('./input')
   .split('\n\n')
   .map((s) => s.replace(/\n/g, ' '));
 

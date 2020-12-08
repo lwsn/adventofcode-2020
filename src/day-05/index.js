@@ -1,4 +1,4 @@
-const input = require('./5-input.json');
+const input = require('./input.json');
 
 const fn = (a, b) => Math.ceil((b - a) / 2);
 

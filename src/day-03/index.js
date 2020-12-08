@@ -1,4 +1,4 @@
-const input = require('./3-input.json');
+const input = require('./input.json');
 
 const fn = (k) => (a, v, i) => (v[(i * k) % v.length] === '#' ? a + 1 : a);
 const resA = input.reduce(fn(3), 0);

@@ -1,4 +1,4 @@
-const resultA = require('./1-input.json').reduce(
+const resultA = require('./input.json').reduce(
   (a, v, i, input) => a
     || input
       .slice(i + 1)
@@ -7,7 +7,7 @@ const resultA = require('./1-input.json').reduce(
   0,
 );
 
-const resultB = require('./1-input.json').reduce(
+const resultB = require('./input.json').reduce(
   (a, v, i, n) => a
     || n
       .slice(i + 1)
