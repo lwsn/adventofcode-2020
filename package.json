@@ -1,0 +1,16 @@
+{
+  "name": "adventofcode-2020",
+  "version": "1.0.0",
+  "description": "Only using npm for eslint, I swear. No leftpad here.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lwsn",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
