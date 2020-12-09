@@ -1,28 +1,18 @@
 const input = require('./input.json');
 
-const resultA = input.find(
-  (n, i) => i >= 25
-    && !input
-      .slice(i - 25, i)
-      .some((n2, i2, l) => l.slice(i2 + 1).reduce((a, n3) => a || n2 + n3 === n, false)),
-);
+const hSum = (n) => (n2, i, l) => l.slice(i + 1).reduce((a, n3) => a || n2 + n3 === n, false);
+const resA = input.find((n, i, l) => i >= 25 && !l.slice(i - 25, i).some(hSum));
 
-const aFn = (n, l, i) => ((arr2) => arr2[0] + arr2[arr2.length - 1])(
-  [n, ...l.slice(0, i + 1)].sort((a, b) => (a > b ? -1 : 1)),
-);
+const addSL = (a) => a[0] + a[a.length - 1];
+const srt = (n, l, i) => [n, ...l.slice(0, i + 1)].sort((a, b) => (a > b ? -1 : 1));
 
 const fn = (n, t) => ([s, r], n2, i, l) => [
   r || s + n2,
-  r || (s + n2 === t && aFn(n, l, i)),
+  r || (s + n2 === t && addSL(srt(n, l, i))),
 ];
 
-const resultB = input.reduce(
-  (a, n, i, l) => a
-    || l
-      .slice(0, i)
-      .reverse()
-      .reduce(fn(n, resultA), [n, false])[1],
-  false,
-);
+const prepL = (l, i) => l.slice(0, i).reverse();
+const rFn = (a, n, i, l) => a || prepL(l, i).reduce(fn(n, resA), [n, false])[1];
+const resultB = input.reduce(rFn, false);
 
-module.exports = [resultA, resultB];
+module.exports = [resA, resultB];
