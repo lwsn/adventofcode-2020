@@ -8,8 +8,6 @@ const resultA = input
 const mkGrps = (a, n) => (n - a[0][0] === 3 ? [[n], ...a] : [[n, ...a[0]], ...a.slice(1)]);
 const fn = (l) => l.slice(1).filter((n) => l[0] - n <= 3);
 const count = (l) => (l.length > 1 ? fn(l).reduce((a, n, i) => a + count(l.slice(i + 1)), 0) : 1);
-const resultB = [...input, input[input.length - 1] + 3]
-  .reduce(mkGrps, [[0]])
-  .reduce((a, l) => a * count(l), 1);
+const resultB = input.reduce(mkGrps, [[0]]).reduce((a, l) => a * count(l), 1);
 
 module.exports = [resultA, resultB];
